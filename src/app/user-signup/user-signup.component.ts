@@ -40,7 +40,7 @@ export class UserSignupComponent implements OnInit {
     xhr.open('POST', url);
     xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 
-    // xhr.send(data);
+    xhr.send(data);
     this.router.navigate(['/success'], { queryParams: { type: userType } });
   }
 

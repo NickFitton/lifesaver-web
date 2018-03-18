@@ -8,6 +8,7 @@ import {UserSignupComponent} from './user-signup/user-signup.component';
 import {UsersComponent} from './user-list/users.component';
 import {GifterHomeComponent} from './gifter-home/gifter-home.component';
 import {RouterModule} from '@angular/router';
+import {DonateDialogComponent} from './user-list/users.component';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -20,17 +21,25 @@ import {FormsModule} from '@angular/forms';
 import {SuccessComponent} from './success/success.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
+
+import {HttpClientModule} from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    UserSignupComponent,
     UsersComponent,
+    UserSignupComponent,
     GifterHomeComponent,
+    DonateDialogComponent,
     SuccessComponent
   ],
   imports: [
+
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     MatCardModule,
@@ -38,14 +47,18 @@ import {MatRadioModule} from '@angular/material/radio';
     MatInputModule,
     MatRadioModule,
     MatButtonModule,
+    MatSelectModule,
+    MatDialogModule,
     MatToolbarModule,
+    MatSnackBarModule,
     MatExpansionModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HttpClientModule],
+  bootstrap: [AppComponent],
+  entryComponents: [DonateDialogComponent],
 })
 export class AppModule {
 }

@@ -5,30 +5,43 @@
 </header>
 <div class="content">
   <mat-accordion>
-    <mat-expansion-panel>
+    <mat-expansion-panel *ngFor="let user of users">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          name surname
+          {{user.name}} {{user.surname}}
         </mat-panel-title>
         <mat-panel-description>
-          location - email
+          {{user.location}} - {{user.email}}
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div class="user-info" fxLayout="row" fxLayoutAlign="start start">
-        <div fxLayout="column" fxLayoutGap="16px">
-          <div fxLayout="row" fxLayoutGap="8px">
-            <mat-form-field><input matInput placeholder="First Name" value="name"></mat-form-field>
-            <mat-form-field><input matInput placeholder="Last Name" value="surname"></mat-form-field>
-          </div>
-          <div fxLayout="row" fxLayoutGap="8px">
-            <mat-form-field><input matInput placeholder="Phone Number" value="phone_no"></mat-form-field>
-            <mat-form-field><input matInput placeholder="Mobile Number" value="mobile_no"></mat-form-field>
+      <div fxLayout="row">
+        <div class="user-info" fxLayout="column" fxLayoutAlign="start start">
+          <div fxLayout="row" fxLayoutGap="16px">
+            <div fxLayout="column" fxLayoutGap="8px">
+              <div fxLayout="column" *ngIf="user.name != null">
+                <span class="title">First Name:</span>
+                <span class="value">{{user.name}}</span>
+              </div>
+              <div fxLayout="column" *ngIf="user.surname != null">
+                <span class="title">Last Name:</span>
+                <span class="value">{{user.surname}}</span>
+              </div>
+            </div>
+            <div fxLayout="column" fxLayoutGap="8px">
+              <div fxLayout="column" *ngIf="user.phone_no != null">
+                <span class="title">Phone Number:</span>
+                <span class="value">{{user.phone_no}}</span>
+              </div>
+              <div fxLayout="column" *ngIf="user.mobile_no != null">
+                <span class="title">Mobile Number:</span>
+                <span class="value">{{user.mobile_no}}</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <textarea matInput placeholder="Their Story">story</textarea>
-        </div>
+        <textarea class="user-info" disabled matInput placeholder="Their Story">{{user.story}}</textarea>
       </div>
+      <button class="padded-button" mat-button (click)="giveTo(user.id)">Offer a Meal</button>
     </mat-expansion-panel>
   </mat-accordion>
 
