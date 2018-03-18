@@ -26,6 +26,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import {HttpClientModule} from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatSnackBarModule} from '@angular/material';
     UserSignupComponent,
     GifterHomeComponent,
     DonateDialogComponent,
-    SuccessComponent
+    SuccessComponent,
+    RestaurantComponent
   ],
   imports: [
 

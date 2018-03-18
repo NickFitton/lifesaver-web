@@ -1,0 +1,30 @@
+<header>
+  <mat-toolbar fxLayoutAlign="space-between center">
+    <span class="header-link" routerLink="/home">Lifesaver</span>
+    <button mat-button routerLink="/signup">Sign Up / Login</button>
+  </mat-toolbar>
+</header>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px">
+  <div>
+    <h2>A List of restaurants that are verified with our service</h2>
+  </div>
+  <div fxLayout="row wrap" fxLayoutGap="16px">
+    <mat-card class="example-card" *ngFor="let restaurant of restaurants">
+      <mat-card-header>
+        <mat-card-title>{{restaurant.name}}</mat-card-title>
+        <mat-card-subtitle>{{restaurant.username}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="restaurant.location != null && restaurant.location !== ''">
+          <h4>Location</h4>
+          <p>{{restaurant.location}}</p>
+        </div>
+        <div *ngIf="restaurant.phone_no != null && restaurant.phone_no !== ''">
+          <h4>Phone Number</h4>
+          <p>{{restaurant.phone_no}}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
