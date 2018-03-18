@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-user-signup',
@@ -21,9 +22,11 @@ export class UserSignupComponent implements OnInit {
   phone_no: string;
 
   constructor(private router: Router) {
+    this.userType = 'beneficiary';
   }
 
   ngOnInit() {
+
   }
 
   makeCreationRequest(userType: string, url: string, data: string) {

@@ -3,6 +3,7 @@
     <span routerLink="/home" class="header-link">Lifesaver</span>
   </mat-toolbar>
 </header>
+
 <div class="content" fxFill fxLayoutAlign="center start">
   <mat-card class="example-card">
     <mat-tab-group>
@@ -42,7 +43,7 @@
             <mat-form-field class="example-full-width">
               <input name="website" [(ngModel)]="website" matInput
                      placeholder="Website"></mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-form-field *ngIf=" userType == 'beneficiary'" class="example-full-width">
               <input name="story" [(ngModel)]="story" matInput
                      placeholder="Story"></mat-form-field>
             <mat-form-field class="example-full-width">
