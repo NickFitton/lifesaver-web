@@ -1,0 +1,18 @@
+<header>
+  <mat-toolbar fxLayoutAlign="space-between center">
+    <span routerLink="/home" class="header-link">Lifesaver</span>
+  </mat-toolbar>
+</header>
+<div *ngIf="userType == 'beneficiary'" fxLayout="column" fxLayoutAlign="start center">
+  <h1>Success!</h1>
+  <h2 class="no-gap">Thanks for signing up,</h2>
+  <h2 class="no-gap">We'll contact you when you are eligible to receive a meal.</h2>
+</div>
+<div *ngIf="userType == 'restaurant'" fxLayout="column" fxLayoutAlign="start center">
+  <h1>Welcome, restaurant</h1>
+</div>
+<div *ngIf="userType == 'benefactor'" fxLayout="column" fxLayoutAlign="start center">
+  <h1>Success!</h1>
+  <h2>Now you are a lifesaver, you can see a list of the beneficiaries you can help us support.</h2>
+  <h2 routerLink="/users" class="header-link body-link">Click here to view the list.</h2>
+</div>
