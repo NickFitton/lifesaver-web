@@ -7,4 +7,6 @@ export class UserModel {
   email: string;
   location: string;
   mobile_no: string;
+  phone_no: string;
+  story: string;
 }

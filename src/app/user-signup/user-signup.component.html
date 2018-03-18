@@ -19,59 +19,58 @@
               Benefactor
             </mat-radio-button>
           </mat-radio-group>
-          <form action="http://ntinc.co.uk/hex2018/register.php?slagroom=user" class="example-form" fxLayoutGap="8px"
-                fxLayoutAlign="center center" fxLayout="row wrap">
+          <form class="example-form" fxLayoutGap="8px" fxLayoutAlign="center center" fxLayout="row wrap">
             <mat-form-field class="example-full-width">
-              <input name="username" [(ngModel)]="username" matInput
-                     placeholder="Username"></mat-form-field>
+              <input name="username" [(ngModel)]="username" matInput placeholder="Username">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input type="password" name="password" [(ngModel)]="password"
-                     matInput placeholder="Password"></mat-form-field>
+              <input type="password" name="password" [(ngModel)]="password" matInput placeholder="Password">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input name="name" [(ngModel)]="name" matInput
-                     placeholder="First Name"></mat-form-field>
+              <input name="name" [(ngModel)]="name" matInput placeholder="First Name">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input name="surname" [(ngModel)]="surname" matInput
-                     placeholder="Last Name"></mat-form-field>
+              <input name="surname" [(ngModel)]="surname" matInput placeholder="Last Name">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input type="date" name="dob" [(ngModel)]="dob" matInput
-                     placeholder="Date Of Birth"></mat-form-field>
+              <input type="date" name="dob" [(ngModel)]="dob" matInput placeholder="Date Of Birth">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input type="email" name="email" [(ngModel)]="email" matInput
-                     placeholder="Email"></mat-form-field>
+              <input type="email" name="email" [(ngModel)]="email" matInput placeholder="Email">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input name="website" [(ngModel)]="website" matInput
-                     placeholder="Website"></mat-form-field>
+              <input name="website" [(ngModel)]="website" matInput placeholder="Website">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input name="story" [(ngModel)]="story" matInput
-                     placeholder="Story"></mat-form-field>
+              <input name="story" [(ngModel)]="story" matInput placeholder="Story">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input name="location" [(ngModel)]="location" matInput
-                     placeholder="Location"></mat-form-field>
+              <input name="location" [(ngModel)]="location" matInput placeholder="Location">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input type="number" name="mobile_no" [(ngModel)]="mobile_no"
-                     matInput placeholder="Mobile Number"></mat-form-field>
+              <input type="number" name="mobile_no" [(ngModel)]="mobile_no" matInput placeholder="Mobile Number">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input type="number" name="phone_no" [(ngModel)]="phone_no"
-                     matInput placeholder="Phone Number"></mat-form-field>
+              <input type="number" name="phone_no" [(ngModel)]="phone_no" matInput placeholder="Phone Number">
+            </mat-form-field>
           </form>
         </mat-card-content>
-        <mat-card-actions>
+        <mat-card-actions fxLayoutAlign="end start">
           <button mat-button type="submit" (click)="setupAndGetPost()">Sign Up</button>
         </mat-card-actions>
       </mat-tab>
       <mat-tab label="Log In">
         <mat-card-content>
-          <form class="example-form" fxLayoutGap="8px" fxLayoutAlign="start center" fxLayout="column">
+          <form class="example-form" fxLayoutGap="8px" fxLayoutAlign="center center" fxLayout="row wrap">
             <mat-form-field class="example-full-width">
-              <input name="username" [(ngModel)]="username" matInput
-                     placeholder="Username"></mat-form-field>
+              <input name="username" [(ngModel)]="username" matInput placeholder="Username">
+            </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input type="password" name="password" [(ngModel)]="password"
-                     matInput placeholder="Password"></mat-form-field>
+              <input type="password" name="password" [(ngModel)]="password" matInput placeholder="Password">
+            </mat-form-field>
           </form>
         </mat-card-content>
-        <mat-card-actions>
+        <mat-card-actions fxLayoutAlign="end start">
           <button mat-button>Log In</button>
         </mat-card-actions>
       </mat-tab>

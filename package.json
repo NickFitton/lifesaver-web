@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "startGlobal": "ng serve --host 10.12.2.224",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

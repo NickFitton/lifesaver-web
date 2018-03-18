@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Thanks for choosing this beneficiary</h1>
+<div mat-dialog-content>
+  <p>Please choose a restaurant for them to eat at and how much you're willing to pay for them.</p>
+  <mat-form-field>
+    <mat-select placeholder="Restaurant" [(value)]="selectedRestaurant">
+      <mat-option *ngFor="let restaurant of data.restaurants" [value]="restaurant.id">
+        {{ restaurant.username }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Dining Style" [(value)]="selectedDiningStyle">
+      <mat-option *ngFor="let style of diningStyles" [value]="style.value">
+        {{ style.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <span matPrefix>£ &nbsp;</span>
+    <input matInput [(ngModel)]="amount" name="amount" placeholder="Amount" value="5">
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Nevermind</button>
+  <button mat-button [mat-dialog-close]="[selectedRestaurant, selectedDiningStyle, amount]" cdkFocusInitial>Donate
+  </button>
+</div>
